@@ -1,5 +1,9 @@
 header.primary{
+	.homepage &{
+		background: image-url('homeHeaderGradient.png') top left repeat-x;
+	}
 	margin-bottom: 1em;
+	min-height: 290px;
 	position: relative;
 	width: 100%;
 	z-index: 10;
@@ -22,26 +26,14 @@ header.primary{
 			repeat: no-repeat;
 		}
 		background-size: contain;
+		clear: both;
 		display: block;
-		height: 140px;
+		height: 63px;
+		margin: 15px auto 20px;
 		position: relative;
-		width: 260px;
-
-		&.errorLogo{
-			float: none;
-		}
+		width: 132px;
 
 		@media screen and (-webkit-min-device-pixel-ratio: 1.5),	(min-device-pixel-ratio: 1.5){
 			background-image: image-url($logo-retina);
-		}
-		
-		@media screen and (max-width: 767px){
-			clear: both;
-			margin: 0.5em auto 0;
-		}
-
-		@media screen and (min-width: 768px){
-			float: left;
-			margin-bottom: 0;
 		}
 	}

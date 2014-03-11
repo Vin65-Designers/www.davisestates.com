@@ -722,6 +722,11 @@ a.nivo-nextNav {
   height: 100%;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 890px;
+}
+
 /*   ===================================================================================================
      1. Typography - These get copied into the admin.css
 ======================================================================================================== */
@@ -733,8 +738,6 @@ body {
   background-color: #f1f1f1;
   color: #111111;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  max-width: 990px;
-  margin: 0 auto;
 }
 @media screen and (min-width: 581px) and (max-width: 1030px) {
   body {
@@ -857,9 +860,13 @@ a[name=footerNav] {
 ======================================================================================================== */
 header.primary {
   margin-bottom: 1em;
+  min-height: 290px;
   position: relative;
   width: 100%;
   z-index: 10;
+}
+.homepage header.primary {
+  background: url('../images/homeHeaderGradient.png?1394555436') top left repeat-x;
 }
 
 @media screen and (max-width: 580px) {
@@ -872,33 +879,20 @@ header.primary {
 }
 
 .logo {
-  background-image: url('../images/logo.png?1391017592');
+  background-image: url('../images/logo.png?1394552603');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
+  clear: both;
   display: block;
-  height: 140px;
+  height: 63px;
+  margin: 15px auto 20px;
   position: relative;
-  width: 260px;
-}
-.logo.errorLogo {
-  float: none;
+  width: 132px;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .logo {
-    background-image: url('../images/logo@2x.png?1391017592');
-  }
-}
-@media screen and (max-width: 767px) {
-  .logo {
-    clear: both;
-    margin: 0.5em auto 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .logo {
-    float: left;
-    margin-bottom: 0;
+    background-image: url('../images/logo@2x.png?1394552621');
   }
 }
 
@@ -907,9 +901,12 @@ header.primary {
 ======================================================================================================== */
 /* ----- a. Main Menu ----- */
 .mainMenu {
+  clear: both;
   font-size: 13px;
   position: relative;
   z-index: 101;
+  border-top: 1px solid #b5985a;
+  border-bottom: 1px solid #b5985a;
 }
 @media screen and (max-width: 767px) {
   .mainMenu {
@@ -918,9 +915,7 @@ header.primary {
 }
 @media screen and (min-width: 768px) {
   .mainMenu {
-    float: right;
-    height: 24px;
-    margin: 80px 0 30px;
+    margin: 0;
   }
 }
 .mainMenu ul {
@@ -928,26 +923,14 @@ header.primary {
   margin: 0;
   padding: 0;
   position: relative;
-}
-@media screen and (max-width: 767px) {
-  .mainMenu ul {
-    text-align: center;
-  }
-}
-@media screen and (min-width: 768px) {
-  .mainMenu ul {
-    text-align: right;
-  }
+  text-align: center;
 }
 .mainMenu ul ul {
-  border: 1px solid #cccccc;
-  background: white;
   display: none;
   font-size: 12px;
-  left: -10px;
+  left: -100%;
   position: absolute;
-  top: 32px;
-  width: 180px;
+  top: 38px;
 }
 .mainMenu li {
   display: inline-block;
@@ -966,11 +949,8 @@ header.primary {
 }
 @media screen and (min-width: 820px) {
   .mainMenu li {
-    margin: 0 0 0 50px;
+    margin: 0 35px;
   }
-}
-.mainMenu li:first-child {
-  margin-left: 0;
 }
 @media screen and (min-width: 768px) {
   .mainMenu li:hover ul {
@@ -979,9 +959,7 @@ header.primary {
 }
 .mainMenu li li {
   display: block;
-  float: none;
   margin: 0;
-  text-align: left;
   width: 180px;
 }
 .mainMenu li li a {
@@ -990,10 +968,7 @@ header.primary {
   height: 28px;
   line-height: 28px;
   margin: 0;
-  padding: 0 0 0 10px;
-  text-align: left;
-  text-transform: none;
-  width: 170px;
+  text-transform: uppercase;
 }
 .mainMenu li li a:hover {
   color: black;
@@ -1026,10 +1001,8 @@ header.primary {
 .mainMenu .v65-pageAParent {
   color: black;
 }
-@media screen and (max-width: 919px) {
-  .mainMenu .v65-home {
-    display: none;
-  }
+.mainMenu .v65-home {
+  display: none;
 }
 .mainMenu .v65-selected {
   color: black;
@@ -1126,75 +1099,11 @@ header.primary {
 }
 
 /* ----- a. Homepage Styles ----- */
-.homepageContent {
-  background: white;
-  box-shadow: 0 0 2em #999999;
-}
-
-.homepageText {
-  margin-bottom: 2em;
-}
-@media screen and (max-width: 700px) {
-  .homepageText {
-    padding: 0 4%;
-  }
-}
-@media screen and (min-width: 701px) {
-  .homepageText {
-    float: left;
-    padding: 0 4% 4%;
-    width: 52%;
-  }
-}
-
-.homepageProductGroup {
-  margin: 0 0 2em;
-}
-@media screen and (max-width: 700px) {
-  .homepageProductGroup {
-    padding: 0 4%;
-  }
-}
-@media screen and (min-width: 701px) {
-  .homepageProductGroup {
-    float: left;
-    padding: 0 4% 4% 0;
-    width: 36%;
-  }
-}
-.homepageProductGroup .v65-productGroup-products {
-  text-align: left;
-  width: 100%;
-}
-.homepageProductGroup .v65-productGroup-title {
-  color: #333333;
-  font-family: Georgia, serif;
-  font-size: 26px;
-  line-height: 1.2;
-  margin: 0.25em  0 0.5em;
-}
-.homepageProductGroup .v65-productGroup-teaser {
-  float: none;
-  margin: 0;
-  width: 100%;
-}
-.homepageProductGroup .v65-productGroup-product {
-  margin: 0 0 1em;
-  width: 100%;
-}
-.homepageProductGroup .v65-product-photo {
-  float: left;
-  width: auto;
-}
-
-#slider {
-  height: 0;
-  padding-top: 35%;
-  overflow: hidden;
-  width: 100%;
-}
-#slider .nivo-main-image {
-  position: absolute !important;
+.homepage {
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
 
 /* ----- b. Page Styles ----- */
