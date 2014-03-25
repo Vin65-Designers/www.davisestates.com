@@ -1,9 +1,9 @@
 header.primary{
 	.homepage &{
 		background: image-url('homeHeaderGradient.png') top left repeat-x;
+		min-height: 290px;
 	}
-	margin-bottom: 1em;
-	min-height: 290px;
+	margin-bottom: 55px;
 	position: relative;
 	width: 100%;
 	z-index: 10;

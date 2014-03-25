@@ -408,10 +408,10 @@ table {
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
 /*
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?96886464#fontello') format('svg');
-  }
+	@font-face {
+		font-family: 'fontello';
+		src: url('../font/fontello.svg?96886464#fontello') format('svg');
+	}
 }
 */
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -535,22 +535,22 @@ table {
 
 /* '' */
 .icon-video:before {
-  content: '🎬';
+  content: '';
 }
 
 /* '\1f3ac' */
 .icon-user:before {
-  content: '👤';
+  content: '';
 }
 
 /* '\1f464' */
 .icon-monitor:before {
-  content: '💻';
+  content: '';
 }
 
 /* '\1f4bb' */
 .icon-phone-1:before {
-  content: '📞';
+  content: '';
 }
 
 /* '\1f4de' */
@@ -560,7 +560,7 @@ table {
 
 /* '' */
 .icon-search-1:before {
-  content: '🔍';
+  content: '';
 }
 
 /* '\1f50d' */
@@ -735,7 +735,7 @@ html {
 }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #fffdf2;
   color: #111111;
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
@@ -859,14 +859,14 @@ a[name=footerNav] {
      2. Header
 ======================================================================================================== */
 header.primary {
-  margin-bottom: 1em;
-  min-height: 290px;
+  margin-bottom: 55px;
   position: relative;
   width: 100%;
   z-index: 10;
 }
 .homepage header.primary {
   background: url('../images/homeHeaderGradient.png?1394555436') top left repeat-x;
+  min-height: 290px;
 }
 
 @media screen and (max-width: 580px) {
@@ -892,7 +892,7 @@ header.primary {
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .logo {
-    background-image: url('../images/logo@2x.png?1394552621');
+    background-image: url('../images/logo@2x.png?1395759347');
   }
 }
 
@@ -963,7 +963,7 @@ header.primary {
   width: 180px;
 }
 .mainMenu li li a {
-  color: #575757;
+  color: #939598;
   display: block;
   height: 28px;
   line-height: 28px;
@@ -1027,6 +1027,7 @@ header.primary {
 
 /* ----- b. Sub Menu ----- */
 .subMenu {
+  display: none;
   margin-bottom: 0;
   margin-top: 6%;
 }
@@ -1078,6 +1079,10 @@ header.primary {
 /*   ===================================================================================================
      4. Content
 ======================================================================================================== */
+.textureBg {
+  background: #fffdf2 url('../images/textureBg.jpg?1394557659') top left;
+}
+
 #v65-modalContentHeader {
   background: #333333;
 }
@@ -1125,10 +1130,13 @@ header.primary {
   z-index: 1000;
 }
 
+.page {
+  max-width: 890px;
+  margin: 0 auto;
+}
 @media screen and (min-width: 768px) {
   .page {
-    float: right;
-    width: 75%;
+    width: 60%;
   }
 }
 
